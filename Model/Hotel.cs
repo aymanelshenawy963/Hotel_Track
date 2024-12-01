@@ -7,7 +7,6 @@
         public string Location { get; set; }
         public int PhoneNumber { get; set; }
         public string Email { get; set; }
-        public int HotelTypeId { get; set; }
         public EnumHotelType HotelType { get; set; }
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
