@@ -16,7 +16,6 @@ namespace Model
         public Room Room { get; set; }
         public Payment Payment { get; set; }
         public Hotel Hotel { get; set; }
-        public ApplicationUser ApplicationUser { get; set; }
 
     }
 }

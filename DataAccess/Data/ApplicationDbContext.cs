@@ -11,10 +11,9 @@ namespace DataAccess.Data
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Booking> Bookings {  get; set; }
         public DbSet<Hotel> Hotels {  get; set; }
-        public DbSet<HotelType> HotelTypes {  get; set; }
         public DbSet<Room> Rooms {  get; set; }
-        public DbSet<RoomType> RoomTypes {  get; set; }
         public DbSet<Review> Reviews {  get; set; }
+        public DbSet<Cart> Carts {  get; set; }
         public DbSet<Payment> Payements {  get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 

@@ -13,7 +13,6 @@ namespace Model
         public EnumIsAdmin IsAdmin { get; set; }
         public byte[] ProfilePicture { get; set; }
 
-        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
 
     }
