@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Model;
 using DataAccess.Data;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Utility;
 
 namespace Hotel_Track
 {
@@ -27,7 +29,20 @@ namespace Hotel_Track
                 .AddDefaultTokenProviders();
 
             builder.Services.AddRazorPages();
-      
+            //Google Registeration
+            builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+            });
+            //Facebook Registeration
+            builder.Services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = builder.Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
+            });
+            //Email Sender
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
             var app = builder.Build();
 
