@@ -5,25 +5,18 @@
 namespace Hotel_Track.Migrations
 {
     /// <inheritdoc />
-    public partial class editEnums : Migration
+    public partial class editModels : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "HotelType",
-                table: "Hotels",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "HotelType",
-                table: "Hotels");
+
         }
     }
 }
