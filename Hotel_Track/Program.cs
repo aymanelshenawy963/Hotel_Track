@@ -5,6 +5,10 @@ using Model;
 using DataAccess.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Utility;
+using DataAccess.Repository;
+using DataAccess.Repository.IRepository;
+using DataAccess.IRepository;
+
 
 namespace Hotel_Track
 {
@@ -27,7 +31,12 @@ namespace Hotel_Track
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
-
+            builder.Services.AddScoped<ICartRepository, CartRepository>();
+            builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+            builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+            builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+            builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
             builder.Services.AddRazorPages();
             //Google Registeration
             builder.Services.AddAuthentication().AddGoogle(googleOptions =>
@@ -41,8 +50,10 @@ namespace Hotel_Track
                 facebookOptions.AppId = builder.Configuration["Authentication:Facebook:AppId"];
                 facebookOptions.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
             });
+
             //Email Sender
             builder.Services.AddTransient<IEmailSender, EmailSender>();
+            
 
             var app = builder.Build();
 
