@@ -302,6 +302,10 @@ namespace Hotel_Track.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -317,8 +321,9 @@ namespace Hotel_Track.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -389,6 +394,10 @@ namespace Hotel_Track.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("HotelId")
                         .HasColumnType("int");
 
@@ -409,6 +418,21 @@ namespace Hotel_Track.Migrations
                     b.HasIndex("HotelId");
 
                     b.ToTable("Rooms");
+                });
+
+            modelBuilder.Entity("Model.UserReview", b =>
+                {
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ReviewId", "ApplicationUserId");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("UserReviews");
                 });
 
             modelBuilder.Entity("Model.ApplicationUser", b =>
@@ -543,7 +567,7 @@ namespace Hotel_Track.Migrations
             modelBuilder.Entity("Model.Review", b =>
                 {
                     b.HasOne("Model.ApplicationUser", "ApplicationUser")
-                        .WithMany("Reviews")
+                        .WithMany()
                         .HasForeignKey("ApplicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -570,6 +594,25 @@ namespace Hotel_Track.Migrations
                     b.Navigation("Hotel");
                 });
 
+            modelBuilder.Entity("Model.UserReview", b =>
+                {
+                    b.HasOne("Model.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Model.Review", "Reviews")
+                        .WithMany()
+                        .HasForeignKey("ReviewId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Reviews");
+                });
+
             modelBuilder.Entity("Model.Hotel", b =>
                 {
                     b.Navigation("Bookings");
@@ -588,11 +631,6 @@ namespace Hotel_Track.Migrations
             modelBuilder.Entity("Model.Room", b =>
                 {
                     b.Navigation("Bookings");
-                });
-
-            modelBuilder.Entity("Model.ApplicationUser", b =>
-                {
-                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

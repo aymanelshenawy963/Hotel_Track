@@ -15,6 +15,7 @@ namespace DataAccess.Data
         public DbSet<Review> Reviews {  get; set; }
         public DbSet<Cart> Carts {  get; set; }
         public DbSet<Payment> Payements {  get; set; }
+        public DbSet<UserReview> UserReviews {  get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
 
@@ -38,8 +39,8 @@ namespace DataAccess.Data
                 .WithMany()
                 .HasForeignKey(b => b.RoomId)
                 .OnDelete(DeleteBehavior.NoAction);  // أو حسب الحاجة
-
-     
+                                                     // تحديد العلاقات الأخرى
+          
         }
 
 
