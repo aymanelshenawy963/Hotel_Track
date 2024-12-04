@@ -1,6 +1,8 @@
-﻿namespace DataAccess.Repository.IRepository
+﻿using Model;
+
+namespace DataAccess.Repository.IRepository
 {
-    public interface ICartRepository:IRepository<CartRepository>
+    public interface ICartRepository:IRepository<Cart>
     {
     }
 }

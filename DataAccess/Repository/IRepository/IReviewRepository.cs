@@ -1,6 +1,8 @@
-﻿namespace DataAccess.Repository.IRepository
+﻿using Stripe;
+
+namespace DataAccess.Repository.IRepository
 {
-    public interface IReviewRepository : IRepository<ReviewRepository>
+    public interface IReviewRepository : IRepository<Review>
     {
     }
 }

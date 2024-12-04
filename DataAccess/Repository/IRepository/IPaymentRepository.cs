@@ -2,7 +2,7 @@
 
 namespace DataAccess.Repository.IRepository
 {
-    public interface IPaymentRepository:IRepository<PaymentRepository>
+    public interface IPaymentRepository:IRepository<Payment>
     {
     }
 }

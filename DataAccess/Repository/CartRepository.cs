@@ -1,10 +1,11 @@
 ﻿using DataAccess.Data;
 using DataAccess.Repository.IRepository;
+using Model;
 
 namespace DataAccess.Repository
 {
     
-    public class CartRepository : Repository<CartRepository>, ICartRepository
+    public class CartRepository : Repository<Cart>, ICartRepository
     {
 
         private readonly ApplicationDbContext dbContext;

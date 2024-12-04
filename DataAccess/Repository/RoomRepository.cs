@@ -1,8 +1,9 @@
 ﻿using DataAccess.Data;
 using DataAccess.Repository.IRepository;
+using Model;
 namespace DataAccess.Repository
 {
-    public class RoomRepository : Repository<RoomRepository>, IRoomRepository
+    public class RoomRepository : Repository<Room>, IRoomRepository
     {
 
         private readonly ApplicationDbContext dbContext;

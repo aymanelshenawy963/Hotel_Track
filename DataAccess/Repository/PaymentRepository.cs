@@ -1,10 +1,11 @@
 ﻿using DataAccess.Data;
 using DataAccess.Repository.IRepository;
+using Model;
 
 namespace DataAccess.Repository
 {
 
-    public class PaymentRepository : Repository<PaymentRepository>, IPaymentRepository
+    public class PaymentRepository : Repository<Payment>, IPaymentRepository
     {
 
         private readonly ApplicationDbContext dbContext;

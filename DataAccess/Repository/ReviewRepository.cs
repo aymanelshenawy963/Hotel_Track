@@ -1,11 +1,12 @@
 ﻿using DataAccess.Data;
 using DataAccess.Repository;
 using DataAccess.Repository.IRepository;
+using Model;
 
 namespace DataAccess.Repository
 {
  
-        public class ReviewRepository : Repository<ReviewRepository>, IReviewRepository
+        public class ReviewRepository : Repository<Review>, IReviewRepository
         {
 
             private readonly ApplicationDbContext dbContext;

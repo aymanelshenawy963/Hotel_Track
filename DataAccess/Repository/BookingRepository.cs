@@ -1,13 +1,14 @@
 ﻿using DataAccess.Data;
 using DataAccess.IRepository;
 using DataAccess.Repository.IRepository;
+using Model;
 
 
 namespace DataAccess.Repository
 {
  
 
-    public class BookingRepository : Repository<BookingRepository>, IBookingRepository
+    public class BookingRepository : Repository<Booking>, IBookingRepository
     {
 
         private readonly ApplicationDbContext dbContext;
