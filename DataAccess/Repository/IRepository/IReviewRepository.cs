@@ -1,4 +1,4 @@
-﻿using Stripe;
+﻿using Model;
 
 namespace DataAccess.Repository.IRepository
 {
