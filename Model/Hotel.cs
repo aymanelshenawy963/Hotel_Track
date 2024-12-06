@@ -8,6 +8,7 @@
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Description { get; set; }
+        public string ImgUrl { get; set; }
         public EnumHotelType HotelType { get; set; }
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();

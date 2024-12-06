@@ -1,4 +1,4 @@
-﻿@* @model List<Cart>
+﻿@model List<Cart>
 
 @if (Model.Count == 0)
 {
@@ -33,11 +33,11 @@ else
                         {
                             <div class="row border-bottom pb-3">
                                 <div class="d-none d-lg-block col-lg-1 text-center py-2">
-                                    <img src="/images/movies/@item.Booking.ImgUrl" class="rounded" width="100%" />
+                                    @* <img src="/images/movies/@item.Booking.ImgUrl" class="rounded" width="100%" /> *@
                                 </div>
                                 <div class="col-12 col-lg-6 pt-md-3">
-                                    <h5 class="text-uppercase text-secondary"><strong>@item.Booking.Name</strong></h5>
-                                    <p><small>@item.Booking.Description</small></p>
+                                    @* <h5 class="text-uppercase text-secondary"><strong>@item.Booking.Room.Name</strong></h5> *@
+                                    @* <p><small>@item.Booking.Description</small></p> *@
                                 </div>
                                 <div class="col-12  col-lg-5 text-center row">
                                     <div class="col-3 text-md-right pt-2 pt-md-4">
@@ -92,4 +92,3 @@ else
         </div>
     </form>
 }
- *@

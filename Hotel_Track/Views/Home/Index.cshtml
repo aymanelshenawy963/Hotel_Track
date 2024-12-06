@@ -1,8 +1,52 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model List<Hotel>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container my-4">
+
+    <form action="/Hotel/Index">
+        <div class="row mb-3">
+            <div class="col-3">
+                <input type="text" placeholder="Search..." class="form-control" name="search">
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="row">
+        @foreach (var hotel in Model)
+        {
+            <div class="col-md-4 col-sm-6 mb-4 d-flex">
+                <div class="card shadow-sm" style="width: 18rem;">
+                    <a href="/Home/Details?hotelId=@hotel.Id">
+                        <img src="~/images/Hotels/@hotel.ImgUrl" class="card-img-top" alt="@hotel.Name"
+                             onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+                    </a>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="card-title">@hotel.Name</h5>
+                            <span class="badge text-bg-primary">@hotel.HotelType.ToString()</span>
+                        </div>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> @hotel.Location</p>
+                        <p class="card-text">@hotel.Description.Substring(0, Math.Min(hotel.Description.Length, 100))...</p>
+                        <p class="card-text">Contact: <i class="bi bi-telephone"></i> @hotel.PhoneNumber</p>
+                        @if (hotel.Reviews.Any())
+                        {
+                            <p class="card-text">
+                                <i class="bi bi-star-fill"></i>
+                                @hotel.Reviews.Count() Review(s)
+                            </p>
+                        }
+                        <a href="/Home/Details?hotelId=@hotel.Id" class="btn btn-primary">More Details...</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning">No hotels found for your search criteria.</div>
+    }
 </div>

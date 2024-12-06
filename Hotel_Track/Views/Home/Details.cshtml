@@ -1,0 +1,33 @@
+﻿@model Hotel
+
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="~/images/Hotels/@Model.ImgUrl" class="img-fluid rounded-start" alt="@Model.Name"
+                 onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">Location: <span class="badge text-bg-warning">@Model.Location</span></p>
+                <p class="card-text">Hotel Type: <span class="badge text-bg-info">@Model.HotelType.ToString()</span></p>
+                @if (Model.Reviews.Any())
+                {
+                    <p class="card-text">
+                        <i class="bi bi-star-fill"></i>
+                        @Model.Reviews.Count() Review(s)
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text text-muted">No reviews yet.</p>
+                }
+                <p class="card-text"><i class="bi bi-telephone"></i> @Model.PhoneNumber</p>
+                <p class="card-text"><i class="bi bi-envelope"></i> @Model.Email</p>
+
+                <a href="/Home/Index" class="btn btn-secondary">Back to Hotels</a>
+            </div>
+        </div>
+    </div>
+</div>
