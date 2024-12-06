@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_Track.Controllers
 {
-    //[Area("Customer")]
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
