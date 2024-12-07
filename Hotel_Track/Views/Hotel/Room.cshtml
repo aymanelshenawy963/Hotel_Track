@@ -1,0 +1,41 @@
+﻿@model Room
+
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="~/images/rooms/@Model.ImgUrl" class="img-fluid rounded-start" alt="@Model.Number"
+                 onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["HotelName"]</h5>
+                <p class="card-text">Room Number: <span class="badge text-bg-warning">@Model.Number</span></p>
+                <div>
+                    <p class="card-text">Room Type : @Model.RoomType</p>
+                    <p class="card-text badge text-bg-Success">Room Type : @Model.PricePerNight</p>
+                </div>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">
+                    Avilability :
+                    @if (@Model.IsAvailable == true)
+                    {
+                        <span class="badge text-bg-success">Avilable</span>
+                    }
+                    else
+                    {
+                        <span class="badge text-bg-danger">Not Avilable</span>
+                    }
+                </p>
+                @if (@Model.IsAvailable == true)
+                {
+                    <a href="/Cart/Index?roomId=@Model.Id" class="btn btn-primary">book Now...</a>
+                }
+                else
+                {
+                    <a href="/Cart/Index?roomId=@Model.Id" class="btn btn-primary disabled">book Now...</a>
+                }
+                <a href="/Hotel/Rooms?hotelId=@Model.HotelId" class="btn btn-secondary">Back to rooms</a>
+            </div>
+        </div>
+    </div>
+</div>

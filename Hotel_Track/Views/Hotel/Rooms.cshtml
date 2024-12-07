@@ -7,7 +7,7 @@
     {
         <div class="col-md-4 col-sm-6 mb-4 d-flex">
             <div class="card shadow-sm" style="width: 18rem;">
-                <a href="/Hotel/Index?roomId=@room.Id">
+                <a href="/Hotel/Room?roomId=@room.Id">
                     <img src="~/images/rooms/@room.ImgUrl" class="card-img-top" alt="@room.Number"
                          onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
                 </a>
@@ -34,7 +34,7 @@
                     else{
                             <a href="/Cart/Index?roomId=@room.Id" class="btn btn-primary disabled">book Now...</a>
                     }
-                    <a href="/Hotel/Index?roomId=@room.Id" class="btn btn-success">Details...</a>
+                    <a href="/Hotel/Room?roomId=@room.Id" class="btn btn-success">Details...</a>
                     </div>
                 </div>
             </div>
