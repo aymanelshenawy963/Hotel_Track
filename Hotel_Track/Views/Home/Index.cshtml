@@ -38,7 +38,10 @@
                                 @hotel.Reviews.Count() Review(s)
                             </p>
                         }
+                    <div>
                         <a href="/Home/Details?hotelId=@hotel.Id" class="btn btn-primary">More Details...</a>
+                        <a href="/Hotel/Rooms?hotelId=@hotel.Id" class="btn btn-primary">Rooms...</a>
+                    </div>
                     </div>
                 </div>
             </div>

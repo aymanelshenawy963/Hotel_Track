@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Model;
+using System.Reflection.Emit;
 
 namespace DataAccess.Data
 {
@@ -18,12 +19,13 @@ namespace DataAccess.Data
         public DbSet<UserReview> UserReviews {  get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             //base.OnModelCreating(builder);
+            
             modelBuilder.Entity<IdentityUser>().ToTable("Users");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
@@ -31,14 +33,27 @@ namespace DataAccess.Data
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
-
-
             // تحديد العلاقات الأخرى
+            modelBuilder.Entity<UserReview>()
+            .HasKey(sc => new { sc.ReviewId, sc.ApplicationUserId });
+           
+            modelBuilder.Entity<UserReview>()
+            .HasOne(ur => ur.Review)
+            .WithMany(r => r.UserReviews) // Assuming Review can have many UserReviews
+            .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<UserReview>()
+                .HasOne(ur => ur.ApplicationUser)
+                .WithMany(a => a.UserReviews) // Assuming ApplicationUser can have many UserReviews
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Disable cascading deletes globally if needed (example)
+
             modelBuilder.Entity<Booking>()
                 .HasOne(b => b.Room)
                 .WithMany()
                 .HasForeignKey(b => b.RoomId)
-                .OnDelete(DeleteBehavior.NoAction);  // أو حسب الحاجة
+                .OnDelete(DeleteBehavior.Restrict);  // أو حسب الحاجة
                                                      // تحديد العلاقات الأخرى
           
         }

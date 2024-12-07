@@ -9,7 +9,8 @@
         public string ApplicationUserId { get; set; }
         public int HotelId { get; set; }
 
-        public ApplicationUser ApplicationUser { get; set; }
+        //public ApplicationUser ApplicationUser { get; set; }
+        public ICollection<UserReview> UserReviews { get; set; }
         public Hotel Hotel { get; set; }
     }
 }

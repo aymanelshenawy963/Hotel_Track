@@ -12,6 +12,7 @@ namespace Model
         public string Address { get; set; }
         public EnumIsAdmin IsAdmin { get; set; }
         public byte[] ProfilePicture { get; set; }
+        public ICollection<UserReview> UserReviews { get; set; }
 
 
     }

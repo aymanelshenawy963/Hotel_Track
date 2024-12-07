@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Hotel_Track.Migrations
+namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241206124927_addImgUrl")]
-    partial class addImgUrl
+    [Migration("20241207003720_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -369,7 +369,7 @@ namespace Hotel_Track.Migrations
 
                     b.Property<string>("ApplicationUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Comment")
                         .IsRequired()
@@ -385,8 +385,6 @@ namespace Hotel_Track.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
 
                     b.HasIndex("HotelId");
 
@@ -542,7 +540,7 @@ namespace Hotel_Track.Migrations
                     b.HasOne("Model.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Model.Room", null)
@@ -577,19 +575,11 @@ namespace Hotel_Track.Migrations
 
             modelBuilder.Entity("Model.Review", b =>
                 {
-                    b.HasOne("Model.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Model.Hotel", "Hotel")
                         .WithMany("Reviews")
                         .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Hotel");
                 });
@@ -608,20 +598,20 @@ namespace Hotel_Track.Migrations
             modelBuilder.Entity("Model.UserReview", b =>
                 {
                     b.HasOne("Model.ApplicationUser", "ApplicationUser")
-                        .WithMany()
+                        .WithMany("UserReviews")
                         .HasForeignKey("ApplicationUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Model.Review", "Reviews")
-                        .WithMany()
+                    b.HasOne("Model.Review", "Review")
+                        .WithMany("UserReviews")
                         .HasForeignKey("ReviewId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
 
-                    b.Navigation("Reviews");
+                    b.Navigation("Review");
                 });
 
             modelBuilder.Entity("Model.Hotel", b =>
@@ -639,9 +629,19 @@ namespace Hotel_Track.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Model.Review", b =>
+                {
+                    b.Navigation("UserReviews");
+                });
+
             modelBuilder.Entity("Model.Room", b =>
                 {
                     b.Navigation("Bookings");
+                });
+
+            modelBuilder.Entity("Model.ApplicationUser", b =>
+                {
+                    b.Navigation("UserReviews");
                 });
 #pragma warning restore 612, 618
         }
