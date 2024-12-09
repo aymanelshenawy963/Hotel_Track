@@ -3,7 +3,6 @@ using Model;
 using DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using DataAccess.Repository.IRepository;
 
 namespace DataAccess.Repository
 {
@@ -46,6 +45,16 @@ namespace DataAccess.Repository
         public T? GetOne(Expression<Func<T, object>>[]? inculdeProp = null, Expression<Func<T, bool>>? expression = null, bool tracked = true)
         {
             return GetAll(inculdeProp, expression, tracked).FirstOrDefault();
+        }
+
+        public T? Find(Expression<Func<T, bool>> expression, bool tracked = true)
+        {
+            var query = dbSet.AsQueryable();
+
+            if (!tracked)
+                query = query.AsNoTracking();
+
+            return query.FirstOrDefault(expression);
         }
         public void Add(T entity)
         {

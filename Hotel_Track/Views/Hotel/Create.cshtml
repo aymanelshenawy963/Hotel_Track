@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-    <form action="/Hotel/Create" enctype="multipart/form-data" method="post">
+    <form asp-action="Create" asp-controller="Hotel" enctype="multipart/form-data" method="post">
         <div class="mb-3">
             <label for="HotelName" class="form-label">Name</label>
             <input class="form-control" asp-for="Name">
@@ -39,18 +39,8 @@
         </div>
         <div class="mb-3">
             <label for="HotelType" class="form-label">Type</label>
-            <select class="form-select" name="CategoryId">
-                @if (ViewBag.HotelType != null)
-                {
-                    foreach (var item in ViewBag.HotelType)
-                    {
-                        <option value="@item.Id">@item.Name</option>
-                    }
-                }
-                else
-                {
-                    <option disabled>No Hotel Types available</option>
-                }
+            <select asp-for="HotelType" class="form-control" asp-items="@(new SelectList(ViewBag.HotelType, "Id", "Name"))">
+                <option value="">Select Hotel Type</option>
             </select>
             <span asp-validation-for="HotelType" class="text-warning"></span>
         </div>

@@ -10,6 +10,7 @@ namespace DataAccess.Repository.IRepository
 
         T? GetOne(Expression<Func<T, object>>[]? inculdeProp = null, Expression<Func<T, bool>>? expression = null, bool tracked = true);
 
+        T? Find(Expression<Func<T, bool>> expression, bool tracked = true);
         void Add(T entity);
 
         void Edit(T entity);

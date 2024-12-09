@@ -36,6 +36,7 @@ namespace Hotel_Track.Controllers
             return View(hotel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Hotel hotel, IFormFile ImgUrl)
         {
             if (ModelState.IsValid)
@@ -58,13 +59,16 @@ namespace Hotel_Track.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-
+            ViewBag.HotelType = Enum.GetValues(typeof(EnumHotelType))
+         .Cast<EnumHotelType>()
+         .Select(e => new { Id = (int)e, Name = e.ToString() })
+         .ToList();
             return View(hotel);
         }
-
+        //Edit an Hotel
         public IActionResult Edit(int HotelId)
         {
-            var hotel = hotelRepository.GetOne(null, e => e.Id == HotelId);
+            var hotel = hotelRepository.Find(e => e.Id == HotelId, tracked: false);
             ViewBag.HotelType = Enum.GetValues(typeof(EnumHotelType))
          .Cast<EnumHotelType>()
          .Select(e => new { Id = (int)e, Name = e.ToString() })
@@ -72,9 +76,10 @@ namespace Hotel_Track.Controllers
             return View(hotel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(Hotel hotel, IFormFile ImgUrl)
         {
-            var oldHotel = hotelRepository.GetOne(null,e => e.Id == hotel.Id);
+            var oldHotel = hotelRepository.Find(e => e.Id == hotel.Id,tracked:false);
             if (ModelState.IsValid)
             {
                 if (ImgUrl != null && ImgUrl.Length > 0)
@@ -98,11 +103,9 @@ namespace Hotel_Track.Controllers
                 else
                 {
                     hotel.ImgUrl = oldHotel.ImgUrl;
-                }
-
-               hotelRepository.Edit(hotel);
+                }    
+                hotelRepository.Edit(hotel);
                 hotelRepository.Commit();
-
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.HotelType = Enum.GetValues(typeof(EnumHotelType))
@@ -113,7 +116,7 @@ namespace Hotel_Track.Controllers
             return View(hotel);
 
         }
-
+        //Delete an hotel
         public IActionResult Delete(int hotelId)
         {
             var hotel = hotelRepository.GetOne(null, e => e.Id == hotelId);
