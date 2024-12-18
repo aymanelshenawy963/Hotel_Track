@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\",
+  "WorkspaceRootPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\hotel_project\\final_code\\code1\\hotel_track\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\roles\\_roleform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\roles\\_roleform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\hotel_project\\final_code\\code1\\hotel_track\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\roles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\hotel_project\\final_code\\code1\\hotel_track\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\hotel_project\\final_code\\code1\\hotel_track\\views\\car\\carlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\shared\\adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\car\\carlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\car\\carlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|d:\\eraasoft\\eraasoft_hoteltrack\\hotel_track\\hotel_track\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8803BEEA-C470-47C3-ACAA-67972D573C55}|Hotel_Track\\Hotel_Track.csproj|solutionrelative:hotel_track\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,6 +51,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
@@ -50,51 +70,104 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_RoleForm.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Roles\\_RoleForm.cshtml",
+              "RelativeDocumentMoniker": "Hotel_Track\\Views\\Roles\\_RoleForm.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Roles\\_RoleForm.cshtml",
+              "RelativeToolTip": "Hotel_Track\\Views\\Roles\\_RoleForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T22:55:35.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Roles\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hotel_Track\\Views\\Roles\\Index.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Roles\\Index.cshtml",
+              "RelativeToolTip": "Hotel_Track\\Views\\Roles\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T22:55:00.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "Hotel_Track\\Controllers\\RolesController.cs",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "Hotel_Track\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T22:54:57.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Hotel_Track\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Hotel_Track\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T22:49:19.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Hotel_Track\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Hotel_Track\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-18T17:41:34.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CarList.cshtml",
-              "DocumentMoniker": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Car\\CarList.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Car\\CarList.cshtml",
               "RelativeDocumentMoniker": "Hotel_Track\\Views\\Car\\CarList.cshtml",
-              "ToolTip": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Car\\CarList.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Car\\CarList.cshtml",
               "RelativeToolTip": "Hotel_Track\\Views\\Car\\CarList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:13:06.399Z"
+              "WhenOpened": "2024-12-18T17:13:06.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "CarController.cs",
-              "DocumentMoniker": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Controllers\\CarController.cs",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "Hotel_Track\\Controllers\\CarController.cs",
-              "ToolTip": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Controllers\\CarController.cs",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Controllers\\CarController.cs",
               "RelativeToolTip": "Hotel_Track\\Controllers\\CarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T17:13:00.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AdminLayout.cshtml",
-              "DocumentMoniker": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
               "RelativeDocumentMoniker": "Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
-              "ToolTip": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
+              "ToolTip": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
               "RelativeToolTip": "Hotel_Track\\Views\\Shared\\AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAI0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-18T17:12:14.277Z",
               "EditorCaption": ""

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Hotel_Track.csproj": {}
+    "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Hotel_Track.csproj": {}
   },
   "projects": {
-    "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\DataAccess.csproj": {
+    "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\",
-        "outputPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\obj\\",
+        "outputPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj"
               },
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Hotel_Track.csproj": {
+    "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Hotel_Track.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Hotel_Track.csproj",
+        "projectUniqueName": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Hotel_Track.csproj",
         "projectName": "Hotel_Track",
-        "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Hotel_Track.csproj",
+        "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Hotel_Track.csproj",
         "packagesPath": "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\",
-        "outputPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\obj\\",
+        "outputPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,14 +144,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\DataAccess\\DataAccess.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\DataAccess\\DataAccess.csproj"
               },
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj"
               },
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj"
               }
             }
           }
@@ -242,14 +242,14 @@
         }
       }
     },
-    "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj": {
+    "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj",
+        "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\",
-        "outputPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\obj\\",
+        "outputPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -347,14 +347,14 @@
         }
       }
     },
-    "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj": {
+    "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj",
+        "projectUniqueName": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj",
         "projectName": "Utiltiy",
-        "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\Utiltiy.csproj",
+        "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\Utiltiy.csproj",
         "packagesPath": "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\",
-        "outputPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Utiltiy\\obj\\",
+        "outputPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Utiltiy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -375,8 +375,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj": {
-                "projectPath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Model\\Model.csproj"
+              "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj": {
+                "projectPath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Model\\Model.csproj"
               }
             }
           }

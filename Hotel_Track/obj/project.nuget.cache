@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6dA6xrfqAKw=",
+  "dgSpecHash": "NuUNay1gMKQ=",
   "success": true,
-  "projectFilePath": "D:\\EraaSoft\\Hotel_Project\\Final_Code\\Code1\\Hotel_Track\\Hotel_Track.csproj",
+  "projectFilePath": "D:\\EraaSoft\\EraaSoft_HotelTrack\\Hotel_Track\\Hotel_Track\\Hotel_Track.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Ayman Elshenawy\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
