@@ -1,0 +1,43 @@
+﻿@model Car
+
+@{
+    ViewData["Title"] = "Create Car";
+}
+
+<div class="container">
+    <h2 class="my-4">Create New Car</h2>
+
+    <!-- Back to Car List Button -->
+    <a href="@Url.Action("CarList", "Car")" class="btn btn-secondary mb-3"><i class="bi bi-arrow-90deg-left"></i> Back to Car List</a>
+
+    <!-- Form to Create New Car -->
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label for="CarModel" class="form-label">Car Model</label>
+            <input type="text" class="form-control" id="CarModel" name="CarModel" required>
+        </div>
+        <div class="mb-3">
+            <label for="LicensePlate" class="form-label">License Plate</label>
+            <input type="text" class="form-control" id="LicensePlate" name="LicensePlate" required>
+        </div>
+        <div class="mb-3">
+            <label for="Capacity" class="form-label">Capacity</label>
+            <input type="number" class="form-control" id="Capacity" name="Capacity" required>
+        </div>
+        <div class="mb-3">
+            <label for="RentPricePerDay" class="form-label">Rent Price Per Day</label>
+            <input type="number" class="form-control" id="RentPricePerDay" name="RentPricePerDay" required>
+        </div>
+      
+        <div class="mb-3">
+            <label for="Location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="Location" name="Location" required>
+        </div>
+       @*  <div class="mb-3">
+            <label for="IsAvailable" class="form-label">Available</label>
+            <input type="checkbox" class="form-check-input" id="IsAvailable" name="IsAvailable">
+        </div> *@
+        <!-- Submit Button to Create New Car -->
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

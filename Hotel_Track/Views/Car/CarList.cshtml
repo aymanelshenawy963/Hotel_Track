@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Car>
+
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<h1>Car List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><i class="fa fa-circle-plus"></i>Add New Car</a>
+</p>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Car DataTable</h3>
+    </div>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CarModel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LicensePlate)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Capacity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RentPricePerDay)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsAvailable)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        Edit
+                    </th>
+                    <th>
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CarModel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LicensePlate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Capacity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RentPricePerDay)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsAvailable)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-block btn-secondary"><i class="fa fa-pencil"></i>Edit</a>
+                        </td>
+                        <td>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-block btn-danger"><i class="fa fa-trash"></i>Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

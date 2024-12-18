@@ -1,0 +1,684 @@
+﻿@model IEnumerable<Hotel>
+
+    @if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <title>StayScape Hotels</title>
+
+    <!-- Add Custom CSS -->
+    <style>
+        /* Background Image Styling */
+        .background-image-wrapper {
+            background-image: url(https://th.bing.com/th/id/R.bf3c3ebc0739427f81a5eb74bb66d9f9?rik=lr35yzuNU%2bG3mw&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-9%2fMountain-Forest-HQ-Desktop-Wallpaper-25755.jpg&ehk=72IKFNmgzGsC0R4qm8DDHcod%2fj7bLp4kHO8jGpvjmm4%3d&risl=&pid=ImgRaw&r=0);
+            background-size: cover;
+            background-position: center;
+            width: 115.5%;
+            height: 80vh;
+            position: relative;
+            margin-left: -8%;
+            margin-bottom: 5%;
+        }
+
+            .background-image-wrapper::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+                z-index: 1;
+            }
+
+        /* Search Section Styling */
+        .search-background {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 4px solid #cc8e00;
+        }
+
+
+        ::placeholder {
+            font-size: 0.8rem;
+        }
+
+        .form-control {
+            position: relative; /* Ensure icon positioning works */
+            padding-left: 40px; /* Adjust as needed */
+        }
+
+        .form-control, .form-control-lg {
+            height: 40px; /* Set the desired height */
+            padding-left: 40px; /* Adjust padding for icons */
+            font-size: 0.8rem; /* Set a uniform font size */
+            border: 1px solid #cc8e00; /* Uniform border style */
+            border-radius: 25px; /* Keep rounded borders */
+            position: relative;
+        }
+
+            .form-control-lg:focus {
+                outline: none;
+                border-color: #0044cc;
+                box-shadow: 0 0 5px rgba(0, 68, 204, 0.5);
+            }
+
+        button[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 68, 204, 0.8);
+        }
+
+
+
+        .position-relative .form-control {
+            padding-left: 40px; /* Adjust to make room for the icon */
+        }
+
+        button[type="submit"] {
+            height: 40px; /* Set the button height to match input fields */
+            background-color: #0044cc;
+            color: #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+
+            button[type="submit"]:hover {
+                background-color: #0033a1;
+                transform: scale(1.05);
+            }
+
+        /* Guest Dropdown Styling */
+        .dropdown-menu {
+            width: 100%;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+        }
+
+
+
+        /* Hotel Card Styling */
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 25px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        /* Flatpickr Calendar Styling */
+        .flatpickr-calendar {
+            font-family: 'Roboto', sans-serif;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .flatpickr-day.selected,
+        .flatpickr-day:hover {
+            background-color: #0044cc;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .flatpickr-day.today {
+            border: 2px solid #cc8e00;
+        }
+
+        input, button[type="submit"] {
+            margin: 0;
+            padding: 0;
+        }
+
+        .amenities-section {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .amenities-heading {
+            text-align: center; /* Align the heading to the right */
+            margin-bottom: 10px; /* Adjust space below the heading */
+            font-size: 1.5rem; /* Adjust the font size */
+            margin-right: 25;
+        }
+
+        .d-flex {
+            margin-top: 10px; /* Space between the heading and the buttons */
+            justify-content: flex-start; /* Ensure the buttons are left-aligned */
+        }
+
+        .amenity-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .amenity-button i {
+                margin-right: 10px;
+            }
+
+            .amenity-button:hover {
+                background-color: #0044cc;
+                color: white;
+            }
+
+        .d-flex {
+            margin-top: 10px;
+            justify-content: center; /* Center align the buttons */
+        }
+
+        .transportation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            margin: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .transportation-button i {
+                margin-right: 10px;
+        }
+
+        .transportation-button:hover {
+                background-color: #0044cc; /* Blue background on hover */
+                color: white; /* White text on hover */
+        }
+        /* Style the container of the slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+        }
+
+        /* Style the slider */
+        .price-slider {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            appearance: none;
+            outline: none;
+            transition: background 0.3s ease-in-out;
+        }
+
+            .price-slider::-webkit-slider-thumb {
+                width: 20px;
+                height: 20px;
+                background: #007bff;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
+            }
+
+                .price-slider::-webkit-slider-thumb:hover {
+                    background: #0056b3;
+                }
+
+            .price-slider:active::-webkit-slider-thumb {
+                background: #0056b3;
+            }
+
+            .price-slider::-moz-range-thumb {
+                width: 20px;
+                height: 20px;
+                background: #007bff;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
+            }
+
+                .price-slider::-moz-range-thumb:hover {
+                    background: #0056b3;
+                }
+
+        /* Style the slider value display */
+        .slider-value {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+            .slider-value span {
+                font-weight: normal;
+            }
+
+            .slider-value #priceDisplay {
+                font-weight: bold;
+                color: #007bff;
+                font-size: 16px;
+            }
+
+        /* Style the button */
+        button {
+            border-radius: 25px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="container-fluid p-0 m-0">
+        <div class="background-image-wrapper position-relative d-flex align-items-center justify-content-center flex-column">
+            <div class="content-container w-75" style="z-index: 3;">
+                <div class="text-center mb-4" style="color: white;">
+                    <h1 class="fw-bold" style="font-family: 'Roboto', sans-serif; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Search Hotels in StayScape</h1>
+                    <p class="fs-5" style="font-family: 'Roboto', sans-serif; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">Enter your dates to see the latest prices and deals for StayScape hotels</p>
+                </div>
+
+                <div class="search-background p-3 rounded" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 4px solid #cc8e00;">
+                    <form asp-action="Index" method="get">
+                        <div class="row g-0 align-items-center">
+                            <!-- Destination Input -->
+                            <div class="col-md-3 position-relative">
+                                <label for="search" class="form-label visually-hidden">Where are you going?</label>
+                                <input type="text" id="search" placeholder="Where are you going?" class="form-control form-control-lg text-dark"
+                                       name="Destination" >
+                                <span class="input-icon position-absolute" style="top: 8px; left: 22px;">   <i class="fas fa-bed"></i></span>
+                            </div>
+                            <!-- Date Range Input -->
+                            <div class="col-md-4 position-relative">
+                                <label for="DateRange" class="form-label visually-hidden">Check-in to Check-out</label>
+                                <input type="text" id="DateRange" class="form-control form-control-lg"
+                                       placeholder="Check-in to Check-out" name="DateRange"
+                                       style="padding-left: 40px; font-size: 0.8rem; border: 1px solid #cc8e00; border-radius: 25px; height: 40px;">
+                                <span class="input-icon position-absolute" style="top: 8px; left: 22px;">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </span>
+                            </div>
+
+                            <!-- Hidden fields for StartDate and EndDate -->
+                            <input type="hidden" id="StartDate" name="StartDate" />
+                            <input type="hidden" id="EndDate" name="EndDate" />
+
+
+                            <!-- Guests Input -->
+                            <div class="col-md-3 position-relative">
+                                <label for="guestsInput" class="form-label visually-hidden">Guests</label>
+                                <input type="text" id="guestsInput" class="form-control form-control-lg" name="Guests" placeholder="2 adults · 0 children · 1 room" readonly>
+                                <span class="input-icon position-absolute" style="top: 8px; left: 22px;"><i class="fas fa-user"></i></span>
+
+                                <div id="guestsDropdown" class="dropdown-menu" style="width: 100%; display: none; position: absolute; top: 100%; left: 0; z-index: 10;">
+                                    <div class="dropdown-item">
+                                        <label for="adults">Adults</label>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" id="adultsDecrement" class="btn btn-sm btn-light">-</button>
+                                            <span id="adultsCount">2</span>
+                                            <button type="button" id="adultsIncrement" class="btn btn-sm btn-light">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <label for="children">Children</label>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" id="childrenDecrement" class="btn btn-sm btn-light">-</button>
+                                            <span id="childrenCount">0</span>
+                                            <button type="button" id="childrenIncrement" class="btn btn-sm btn-light">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <label for="rooms">Rooms</label>
+                                        <div class="d-flex justify-content-between">
+                                            <button type="button" id="roomsDecrement" class="btn btn-sm btn-light">-</button>
+                                            <span id="roomsCount">1</span>
+                                            <button type="button" id="roomsIncrement" class="btn btn-sm btn-light">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <label for="pets">Travelling With Pets?</label>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="petsSwitch">
+                                            <label class="form-check-label" for="petsSwitch">Yes</label>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item text-center">
+                                        <button type="button" id="doneButton" class="btn btn-primary btn-sm w-100">Done</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Search Button -->
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary btn-lg w-100" style="border-radius: 25px; border: none;">Search</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="transportation-section" style="margin-top: 30px; padding: 20px;">
+        <h2 class="text-center" style="color: black; font-weight: bold; font-size: 2rem;">Make Your Journey Enjoyable with Our Transportation Options</h2>
+        <p class="text-center" style="color: gray; font-size: 1rem;">Choose from a range of convenient and affordable transportation services to complement your stay.</p>
+
+        <div class="d-flex justify-content-center mt-4">
+            <div class="card mx-2" style="width: 18rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://th.bing.com/th/id/OIP.vzGujCTlbarDnR8uJ-_IcAHaEo?rs=1&pid=ImgDetMain" class="card-img-top" alt="Car Rental" style="border-radius: 10px 10px 0 0;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Car Rental</h5>
+                    <p class="card-text text-center">Enjoy the freedom to explore at your own pace with our reliable and flexible car rental service.</p>
+                    <a href="/Car/Index" class="btn btn-primary w-100">Rent a Car</a>
+                </div>
+            </div>
+
+            <div class="card mx-2" style="width: 18rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://th.bing.com/th/id/OIP.Ehbe-oWv3QL63_B7elUPYgHaE7?rs=1&pid=ImgDetMain" class="card-img-top" alt="Bus Service" style="border-radius: 10px 10px 0 0;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Bus Service</h5>
+                    <p class="card-text text-center">Travel comfortably and affordably with our scheduled bus services. Perfect for trips.</p>
+                    <a href="/Bus/Index" class="btn btn-primary w-100">Book a Bus</a>
+                </div>
+            </div>
+
+            <div class="card mx-2" style="width: 18rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="https://th.bing.com/th/id/OIP.im8rRVcEZ1Vr9jyQ5r8IEgHaEK?rs=1&pid=ImgDetMain)" class="card-img-top" alt="Train Service" style="border-radius: 10px 10px 0 0;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Train Service</h5>
+                    <p class="card-text text-center">Fast and convenient train services for your long-distance travel, providing comfort and efficiency. Book with us now</p>
+                    <a href="/Train/Index" class="btn btn-primary w-100">Book a Train</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="amenities-section" style="padding: 30px 0; background-color: #f9f9f9;">
+        <h2 class="amenities-heading text-center" style="font-size: 2rem; font-weight: bold; color: #333;">Find Your Perfect Stay Faster</h2>
+        <p class="text-center" style="color: gray; font-size: 1rem; margin-bottom: 30px;">Choose from our range of amenities to enhance your stay.</p>
+        <div class="d-flex justify-content-center flex-wrap">
+            <!-- Amenities Buttons -->
+            <button class="amenity-button" style="margin: 10px; padding: 15px 30px; font-size: 1rem; border-radius: 8px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <i class="fas fa-cat" style="font-size: 1.5rem; margin-right: 10px;"></i> Pets Allowed
+            </button>
+            <button class="amenity-button" style="margin: 10px; padding: 15px 30px; font-size: 1rem; border-radius: 8px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <i class="fas fa-swimming-pool" style="font-size: 1.5rem; margin-right: 10px;"></i> Pools
+            </button>
+            <button class="amenity-button" style="margin: 10px; padding: 15px 30px; font-size: 1rem; border-radius: 8px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <i class="fas fa-wifi" style="font-size: 1.5rem; margin-right: 10px;"></i> Wi-Fi
+            </button>
+            <button class="amenity-button" style="margin: 10px; padding: 15px 30px; font-size: 1rem; border-radius: 8px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <i class="fas fa-car" style="font-size: 1.5rem; margin-right: 10px;"></i> Parking
+            </button>
+            <button class="amenity-button" style="margin: 10px; padding: 15px 30px; font-size: 1rem; border-radius: 8px; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <i class="fas fa-dumbbell" style="font-size: 1.5rem; margin-right: 10px;"></i> Gym
+            </button>
+        </div>
+    </div>
+
+    <!-- Hotels List Section -->
+    <div class="container my-4" style="margin-top: 30vh;">
+        <h2 class="mb-4 text-center fw-bold">Featured Hotels</h2>
+        <div class="row">
+            <!-- Filters Section -->
+            <div class="col-md-3">
+                <div class="p-4 shadow-sm" style="background-color: #f8f9fa; border-radius: 8px; min-height: 600px;">
+                    <h5 class="fw-bold mb-4">Filter by</h5>
+
+                    <form method="get" action="@Url.Action("Index", "Home")">
+                        <!-- Price Range Filter -->
+                        <div class="col-md-6">
+                            <label for="priceRange" class="form-label fw-bold">Price</label>
+
+                            <!-- Price range slider -->
+                            <div class="slider-container">
+                                <input type="range" id="priceRange" name="MaxPrice" min="0" max="1000" step="10" value="1000" class="price-slider" />
+                                <div class="slider-value">
+                                    <span id="priceDisplay" class="fw-bold">1000</span>
+                                </div>
+                            </div>
+
+                            <!-- Hidden field for the MaxPrice input -->
+                            <input type="hidden" id="maxPrice" name="MaxPrice" value="1000" />
+                        </div>
+
+
+                        <!-- Star Rating Checkboxes Here -->
+                        <div class="mb-5">
+                            <h6 class="fw-bold">Star Rating</h6>
+                            <div class="form-check">
+                                <input type="checkbox" id="sevenStars" class="form-check-input" name="HotelType" value="7">
+                                <label class="form-check-label" for="sevenStars">7-Stars</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="fiveStars" class="form-check-input" name="HotelType" value="5">
+                                <label class="form-check-label" for="fiveStars">5-Stars</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="threeStars" class="form-check-input" name="HotelType" value="3">
+                                <label class="form-check-label" for="threeStars">3-Stars</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-4">Apply Filters</button>
+                    </form>
+
+
+                </div>
+            </div>
+            <!-- Hotel Cards Section -->
+            <div class="col-md-9">
+                @foreach (var hotel in Model)
+                {
+                    <div class="row mb-4">
+                        <div class="card d-flex flex-row shadow-sm" style="min-height: 220px; max-width: 100%;">
+                            <!-- Hotel Image -->
+                            <div class="col-4">
+                                <img src="~/images/Hotels/@hotel.ImgUrl"
+                                     class="img-fluid rounded-start"
+                                     alt="@hotel.Name"
+                                     style="height: 100%; object-fit: cover;">
+                            </div>
+                            <!-- Hotel Details -->
+                            <div class="col-5 d-flex flex-column justify-content-between p-3">
+                                <div>
+                                    <h6 class="card-title fw-bold text-primary mb-1">
+                                        @hotel.Name
+                                        <span class="text-warning ms-2" style="font-size: 1rem;">
+                                            @for (int i = 0; i < (int)hotel.HotelType; i++)
+                                            {
+                                                @Html.Raw("&#9733;")
+                                            }
+                                            <span class="icon-box">
+                                                <i class="bi bi-hand-thumbs-up"></i>
+                                            </span>
+                                        </span>
+                                    </h6>
+                                    <p class="card-text text-muted mb-2">
+                                        <i class="bi bi-geo-alt-fill text-primary"></i> @hotel.Location
+                                    </p>
+                                    
+                                    <p class="card-text text-muted mb-3">@hotel.Description</p>
+                                    <a href="/Home/Details?hotelId=@hotel.Id" type="button" class="btn btn-link" style="margin-top: 50px; font-size: 0.8rem;">Show more</a>
+                                </div>
+                            </div>
+                            <!-- Price and Button -->
+                            <div class="col-3 d-flex flex-column justify-content-between align-items-end text-end p-3">
+                                <span class="text-primary" style="font-size: 0.8rem;">Min Price</span>
+                                <span class="text-success fw-bold" style="font-size: 1.3rem;">EGP @hotel.MinPrice</span>
+                                <p class="text-muted small">1 night, 2 adults</p>
+
+                                @if (hotel.Rooms.Any(r => r.IsAvailable)) // Check if there is any available room
+                                {
+                                    <a href="@Url.Action("Index", "Home", new { hotelId = hotel.Id })"
+                                       class="btn btn-primary px-4"
+                                       style="width: 150%; height:20%">
+                                        Check Availability
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="btn btn-secondary px-4" style="width: 150%; height:20%">
+                                        No Availability
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Hotel")" class="btn btn-primary px-4">
+            Show All Hotels
+        </a>
+    </div>
+
+    <!-- Your Custom Scripts -->
+    <script>
+        // Initialize Flatpickr (Date Range Calendar)
+            flatpickr("#DateRange", {
+            mode: "range", // Enable range selection
+            dateFormat: "Y-m-d", // Set the date format to YYYY-MM-DD
+            altInput: true, // Use an alternative input format (e.g., for user-friendly display)
+            altFormat: "F j, Y", // Alternative format for display (e.g., December 1, 2024)
+            minDate: "today", // Set the minimum date to today
+            onClose: function(selectedDates, dateStr, instance) {
+                // Get the selected date range in the format "YYYY-MM-DD to YYYY-MM-DD"
+                if (selectedDates.length === 2) {
+                    const startDate = selectedDates[0].toISOString().split('T')[0]; // Start date
+                    const endDate = selectedDates[1].toISOString().split('T')[0]; // End date
+                    document.getElementById('StartDate').value = startDate;
+                    document.getElementById('EndDate').value = endDate;
+                    document.getElementById('DateRange').value = `${startDate} to ${endDate}`;
+                }
+            }
+        });
+
+
+        // Toggle guests dropdown
+        document.getElementById('guestsInput').addEventListener('click', function() {
+            const dropdown = document.getElementById('guestsDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Increment/Decrement guests count
+        function updateGuestsCount(type, increment) {
+            const countElement = document.getElementById(`${type}Count`);
+            let count = parseInt(countElement.textContent);
+            count += increment;
+            if (count < 0) count = 0;
+            countElement.textContent = count;
+        }
+
+        // Add event listeners for increment and decrement buttons
+        document.getElementById('adultsIncrement').addEventListener('click', function() {
+            updateGuestsCount('adults', 1);
+        });
+        document.getElementById('adultsDecrement').addEventListener('click', function() {
+            updateGuestsCount('adults', -1);
+        });
+        document.getElementById('childrenIncrement').addEventListener('click', function() {
+            updateGuestsCount('children', 1);
+        });
+        document.getElementById('childrenDecrement').addEventListener('click', function() {
+            updateGuestsCount('children', -1);
+        });
+        document.getElementById('roomsIncrement').addEventListener('click', function() {
+            updateGuestsCount('rooms', 1);
+        });
+        document.getElementById('roomsDecrement').addEventListener('click', function() {
+            updateGuestsCount('rooms', -1);
+        });
+
+        // Update guests input and close dropdown
+        document.getElementById('doneButton').addEventListener('click', function() {
+            const adultsCount = document.getElementById('adultsCount').textContent;
+            const childrenCount = document.getElementById('childrenCount').textContent;
+            const roomsCount = document.getElementById('roomsCount').textContent;
+            const petsStatus = document.getElementById('petsSwitch').checked ? 'Yes' : 'No';
+
+            document.getElementById('guestsInput').value = `${adultsCount} adults · ${childrenCount} children · ${roomsCount} room${roomsCount > 1 ? 's' : ''} · Pets: ${petsStatus}`;
+            document.getElementById('guestsDropdown').style.display = 'none';
+        });
+               document.addEventListener('DOMContentLoaded', function() {
+            const priceRange = document.getElementById('priceRange');
+            const priceDisplay = document.getElementById('priceDisplay');
+            const maxPriceInput = document.getElementById('maxPrice');
+
+            // Function to update the price display and hidden input
+            function updatePriceRange() {
+                const selectedPrice = priceRange.value;
+                priceDisplay.textContent = selectedPrice;
+                maxPriceInput.value = selectedPrice; // Update hidden field value
+            }
+
+            // Initialize the price range when the page loads
+            updatePriceRange();
+
+            // Event listener for slider changes
+            priceRange.addEventListener('input', updatePriceRange);
+        });
+
+    </script>
+
+</body>
+</html>

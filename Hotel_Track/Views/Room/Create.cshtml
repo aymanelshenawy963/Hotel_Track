@@ -1,0 +1,162 @@
+﻿@model Room
+
+@{
+    ViewData["Title"] = "Create Room";
+}
+
+<h2 class="text-center mb-4">Create Room</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="create-room-form">
+    <div class="form-group mb-3">
+        <label asp-for="Number" class="form-label"></label>
+        <input asp-for="Number" class="form-control" />
+        <span asp-validation-for="Number" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="PricePerNight" class="form-label"></label>
+        <input asp-for="PricePerNight" class="form-control" />
+        <span asp-validation-for="PricePerNight" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="IsAvailable" class="form-label"></label>
+        <input asp-for="IsAvailable" type="checkbox" class="form-check-input" />
+        <span asp-validation-for="IsAvailable" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control custom-textarea"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="ImgUrl" class="form-label"></label>
+        <input asp-for="ImgUrl" type="file" class="form-control" />
+        <span asp-validation-for="ImgUrl" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="RoomType" class="form-label"></label>
+        <select asp-for="RoomType" class="form-control custom-select" asp-items="Html.GetEnumSelectList<EnumRoomType>()">
+            <option value="">-- Select Room Type --</option>
+        </select>
+        <span asp-validation-for="RoomType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="HotelId" class="form-label"></label>
+        <select asp-for="HotelId" class="form-control custom-select" asp-items="ViewBag.hotelId">
+            <option value="">-- Select Hotel Name --</option>
+        </select>
+        <span asp-validation-for="HotelId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary w-100">Create</button>
+    </div>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<style>
+    /* Form container styles */
+    .create-room-form {
+        background-color: #f8f9fa;
+        padding: 25px; /* Middle padding */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+        margin-top: 50px; /* Adjusted top margin */
+        max-width: 600px; /* Middle width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Heading styles */
+    h2 {
+        font-size: 2.2em; /* Middle heading size */
+        font-weight: bold;
+        color: #343a40;
+        margin-bottom: 20px; /* Adjusted space between heading and form */
+    }
+
+    /* Label styling */
+    .form-label {
+        font-weight: bold;
+        color: #495057;
+        font-size: 1rem; /* Middle label font size */
+    }
+
+    /* Form controls (input, select, textarea) */
+    .form-control {
+        border-radius: 6px; /* Smaller rounded borders */
+        border: 1px solid #ced4da;
+        padding: 12px 14px; /* Slightly more padding for a better feel */
+        font-size: 1rem; /* Middle font size */
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    .custom-textarea {
+        resize: vertical;
+        min-height: 120px; /* Middle size textarea height */
+    }
+
+    .custom-select {
+        background-color: #ffffff;
+        border-radius: 6px; /* Slightly smaller rounded borders for select */
+        padding: 12px 14px; /* Slightly more padding */
+        font-size: 1rem; /* Middle font size */
+        transition: border-color 0.3s ease;
+    }
+
+        .custom-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+    /* Checkbox styling */
+    .form-check-input {
+        margin-top: 0.3rem;
+    }
+
+    /* Submit button styling */
+    .btn {
+        padding: 12px 18px; /* Slightly bigger button */
+        font-size: 1.1rem; /* Slightly larger font for button */
+        font-weight: bold;
+        border-radius: 6px; /* Medium rounded button */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+    /* Error message styling */
+    .text-danger {
+        font-size: 0.9rem; /* Adjusted error text size */
+    }
+
+    /* Margin for form-group to ensure spacing between fields */
+    .form-group {
+        margin-bottom: 1.25rem; /* Increased space between form groups */
+    }
+
+    /* Button full width */
+    .w-100 {
+        width: 100%;
+    }
+</style>

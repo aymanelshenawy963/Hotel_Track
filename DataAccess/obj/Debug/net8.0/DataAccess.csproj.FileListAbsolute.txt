@@ -1,0 +1,58 @@
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Code1\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\DataAccess.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\Model.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\bin\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

@@ -1,0 +1,174 @@
+﻿@model Room
+
+@section Scripts
+{
+    <partial name="_NotifationPartial.cshtml"></partial>
+}
+
+<head>
+    <!-- Include Flatpickr Library -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        .custom-card {
+            border-radius: 15px;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+            .custom-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+
+        .custom-img {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .badge {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+            }
+
+            .btn.disabled {
+                background-color: #d6d8db;
+                pointer-events: none;
+            }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card mb-4 custom-card shadow-sm">
+        <div class="row g-0">
+            <!-- Image Section -->
+            <div class="col-md-4">
+                <img src="~/images/Rooms/@Model.ImgUrl"
+                     class="img-fluid rounded-start custom-img"
+                     alt="@Model.Number"
+                     onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+            </div>
+
+            <!-- Details Section -->
+            <div class="col-md-8">
+                <div class="card-body">
+                    <!-- Hotel Name -->
+                    <a href="/Home/Details?hotelId=@Model.HotelId" class="btn btn-primary w-100 text-center">
+                        <h5 class="card-title">@ViewData["HotelName"]</h5>
+                    </a>
+
+                    <!-- Room Details -->
+                    <p class="card-text">
+                        Room Number: <span class="badge bg-warning">@Model.Number</span>
+                    </p>
+                    <p class="card-text">
+                        Room Type: <span class="badge bg-info">@Model.RoomType</span>
+                    </p>
+                    <p class="card-text">
+                        Price per Night: <span class="badge bg-success">$@Model.PricePerNight</span>
+                    </p>
+                    <p class="card-text">@Model.Description</p>
+
+                    <!-- Availability -->
+                    <p class="card-text">
+                        Availability:
+                        <span class="badge @(Model.IsAvailable ? "bg-success" : "bg-danger")">
+                            @(Model.IsAvailable ? "Available" : "Not Available")
+                        </span>
+                    </p>
+                    @if (Model.IsAvailable)
+                    {
+                        <form method="post" action="/Cart/AddToCart">
+                            <input type="hidden" name="roomId" value="@Model.Id" />
+                            <input type="hidden" name="hotelId" value="@Model.HotelId" />
+
+                            <div class="mb-3">
+                                <label class="form-label">Check In Date</label>
+                                <input type="date" id="checkInDate" name="CheckInDate" class="form-control" placeholder="Check-In Date"
+                                       required min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Check Out Date</label>
+                                <input type="date" id="checkOutDate" name="CheckOutDate" class="form-control" placeholder="Check-Out Date"
+                                       required min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Book Now
+                            </button>
+                        </form>
+
+                 
+                    }
+
+
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-start mt-3">
+                        <a href="/Room/Rooms?hotelId=@Model.HotelId" class="btn btn-secondary">
+                            Back to Rooms
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Date Range Picker -->
+    <script>
+        flatpickr("#dateRange", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+            altInput: true,
+            altFormat: "F j, Y",
+            minDate: "today",
+            onClose: function(selectedDates) {
+                if (selectedDates.length === 2) {
+                    const startDate = selectedDates[0].toISOString().split('T')[0];
+                    const endDate = selectedDates[1].toISOString().split('T')[0];
+                    document.getElementById('StartDate').value = startDate;
+                    document.getElementById('EndDate').value = endDate;
+                    document.getElementById('dateRange').value = startDate + " to " + endDate;
+                }
+            }
+        });
+    </script>
+@*     <script>
+        // قائمة بالتواريخ المحجوزة (يمكن تمريرها من الخادم)
+        const reservedDates = @Html.Raw(Json.Serialize(@ViewData["ReservedDates"]));
+
+        // قم بتعطيل التواريخ في حقول التاريخ
+        function disableReservedDates(input) {
+            input.addEventListener('input', function () {
+                const dateValue = new Date(this.value);
+                if (reservedDates.some(date => new Date(date).toDateString() === dateValue.toDateString())) {
+                    alert("This date is reserved. Please choose another date.");
+                    this.value = ""; // امسح القيمة إذا كانت محجوزة
+                }
+            });
+        }
+
+        const checkInDateInput = document.getElementById('checkInDate');
+        const checkOutDateInput = document.getElementById('checkOutDate');
+
+        disableReservedDates(checkInDateInput);
+        disableReservedDates(checkOutDateInput);
+    </script> *@
+</body>

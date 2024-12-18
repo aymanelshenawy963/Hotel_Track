@@ -1,0 +1,43 @@
+D:\EraaSoft\Hotel_Project\Code1\Model\bin\Debug\net8.0\Model.deps.json
+D:\EraaSoft\Hotel_Project\Code1\Model\bin\Debug\net8.0\Model.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Code1\Model\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Code1\Model\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.sourcelink.json
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\refint\Model.dll
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\Model.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Code1\Model\obj\Debug\net8.0\ref\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\bin\Debug\net8.0\Model.deps.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\bin\Debug\net8.0\Model.runtimeconfig.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\bin\Debug\net8.0\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\bin\Debug\net8.0\Model.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.csproj.AssemblyReference.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfoInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfo.cs
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.csproj.CoreCompileInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\refint\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\Model.genruntimeconfig.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Model\obj\Debug\net8.0\ref\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\bin\Debug\net8.0\Model.deps.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\bin\Debug\net8.0\Model.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\refint\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\Model.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Model\obj\Debug\net8.0\ref\Model.dll

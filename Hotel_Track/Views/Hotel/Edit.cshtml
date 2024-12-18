@@ -1,0 +1,95 @@
+﻿@model Hotel
+<div class="row mb-3">
+    <nav class="fs-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item "><a href="/Home/index" class="fs-3">Home</a></li>
+            <li class="breadcrumb-item "><a href="/Hotel/index" class="fs-3">All Hotels</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><span class="fs-4">Edit Hotel : @Model.Name</span></li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <form asp-action="Edit" asp-controller="Hotel" asp-route-hotelId="@Model.Id" enctype="multipart/form-data" method="post">
+        <div class="mb-3">
+            <input type="hidden" class="form-control" name="Id" value="@Model.Id" />
+            <label for="HotelName" class="form-label">Hotel Name</label>
+            <input class="form-control" asp-for="Name">
+            <span asp-validation-for="Name" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelName" class="form-label">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span asp-validation-for="Name" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelLocation" class="form-label">Location</label>
+            <input class="form-control" asp-for="Location">
+            <span asp-validation-for="Location" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelEmail" class="form-label">Email</label>
+            <input class="form-control" asp-for="Email">
+            <span asp-validation-for="Email" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelPhoneNumber" class="form-label">Phone Number</label>
+            <input class="form-control" asp-for="PhoneNumber">
+            <span asp-validation-for="PhoneNumber" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelDescription" class="form-label">Description</label>
+            <input class="form-control" asp-for="Description">
+            <span asp-validation-for="Description" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelAmenities" class="form-label">Amenities</label>
+            <input class="form-control" asp-for="Amenities">
+            <span asp-validation-for="Amenities" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <input asp-for="PetsAllowed">
+            <label for="HotelPetsAllowed" class="form-label">PetsAllowed</label>
+            <span asp-validation-for="PetsAllowed" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelMinPrice" class="form-label">MinPrice</label>
+            <input class="form-control" asp-for="MinPrice">
+            <span asp-validation-for="MinPrice" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelMaxPrice" class="form-label">MaxPrice</label>
+            <input class="form-control" asp-for="MaxPrice">
+            <span asp-validation-for="MaxPrice" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label for="HotelImage" class="form-label">Hotel Image</label>
+            <input type="file" class="form-control" id="HotelImage" asp-for="ImgUrl" onchange="previewImage(event)"
+                   data-val="false" data-val-required="false">
+            <span asp-validation-for="ImgUrl" class="text-warning"></span>
+            <div>
+            <img id="imagePreview" src="~/images/Hotels/@Model.ImgUrl" alt="Image Preview" style="margin-top: 10px; max-width: 20%;" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label asp-for="HotelType" class="control-label">Type</label>
+            <select asp-for="HotelType" class="form-control" asp-items="@(new SelectList(ViewBag.HotelType, "Id", "Name"))">
+                <option value="">Select Hotel Type</option>
+            </select>
+            <span asp-validation-for="HotelType" class="text-warning"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    function previewImage(event) {
+        const imagePreview = document.getElementById('imagePreview');
+        imagePreview.src = URL.createObjectURL(event.target.files[0]);
+        imagePreview.style.display = 'block';
+    }
+</script>
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

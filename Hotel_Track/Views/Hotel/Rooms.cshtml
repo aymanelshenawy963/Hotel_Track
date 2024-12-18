@@ -1,0 +1,43 @@
+﻿@model List<Room>
+<div class="mb-3">
+<a href="/Home/index" class="btn btn-primary ">Back To Hotels</a>
+</div>
+<div class="row">
+    @foreach (var room in Model)
+    {
+        <div class="col-md-4 col-sm-6 mb-4 d-flex">
+            <div class="card shadow-sm" style="width: 18rem;">
+                <a href="/Hotel/Room?roomId=@room.Id">
+                    <img src="~/images/rooms/@room.ImgUrl" class="card-img-top" alt="@room.Number"
+                         onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+                </a>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title">@room.Number</h5>
+                        <span class="badge text-bg-primary">price : @room.PricePerNight</span>
+                    </div>
+                    <p class="card-text">
+                        @if (@room.IsAvailable == true)
+                        {
+                            <span class="badge text-bg-success">Avilable</span>
+                        }
+                    else{
+                    <span class="badge text-bg-danger">Not Avilable</span>}
+                    </p>
+                    <p class="card-text">@room.Description.Substring(0, Math.Min(room.Description.Length, 100))...</p>
+                    <p class="card-text">Contact: <i class="bi bi-telephone"></i> @room.RoomType</p>
+                    <div>
+                    @if (@room.IsAvailable == true)
+                    {
+                      <a href="/Cart/Index?roomId=@room.Id" class="btn btn-primary">book Now...</a>
+                    }
+                    else{
+                            <a href="/Cart/Index?roomId=@room.Id" class="btn btn-primary disabled">book Now...</a>
+                    }
+                    <a href="/Hotel/Room?roomId=@room.Id" class="btn btn-success">Details...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,86 @@
+﻿@model Hotel
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card mb-4 shadow-lg" style="max-width: 800px; width: 100%;">
+        <div class="row g-0">
+            <!-- Hotel Image Section -->
+            <div class="col-md-5 d-flex">
+                <img src="~/images/Hotels/@Model.ImgUrl"
+                     class="img-fluid rounded-start w-100"
+                     alt="@Model.Name ?? " Hotel Image""
+                     onerror="this.onerror=null;this.src='/images/placeholder.jpg';"
+                     style="object-fit: cover; height: 100%;">
+            </div>
+
+            <!-- Hotel Details Section -->
+            <div class="col-md-7">
+                <div class="card-body d-flex flex-column" style="height: 100%;">
+                    <h5 class="card-title text-primary fw-bold" style="font-size: 1.6rem;">@Model.Name</h5>
+
+
+
+                    <p class="card-text text-muted" style="font-size: 1rem; line-height: 1.5;">@Model.Description</p>
+                    <p class="card-text">Location: <span class="badge text-bg-warning">@Model.Location</span></p>
+                    <p class="card-text">Hotel Type: <span class="badge text-bg-info">@Model.HotelType.ToString()</span></p>
+
+                    <p class="card-text">
+                        <strong>Rooms:</strong>
+                        @if (Model.Rooms.Any())
+                        {
+                            <span class="badge text-bg-success">@Model.Rooms.Count(r => r.IsAvailable) rooms available</span>
+                        }
+                        else
+                        {
+                            <span class="badge text-bg-danger">No rooms available</span>
+                        }
+                    </p>
+
+                    @if (Model.Reviews.Any())
+                    {
+                        <p class="card-text">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            @Model.Reviews.Count() Review(s)
+                        </p>
+                    }
+                    else
+                    {
+                        <p class="card-text text-muted">No reviews yet.</p>
+                    }
+
+                    <!-- Contact Information -->
+                    <p class="card-text"><i class="bi bi-telephone"></i> @Model.PhoneNumber</p>
+                    <p class="card-text"><i class="bi bi-envelope"></i> @Model.Email</p>
+
+                    <div class="d-flex mb-3">
+                        <a href="/Home/Index" class="btn btn-secondary me-2">Back to Hotels</a>
+                        <a href="/Room/Rooms?hotelId=@Model.Id" class="btn btn-primary">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reviews Section -->
+@if (Model.Reviews.Any())
+{
+    <div class="reviews-section mt-5">
+        <h5 class="fw-bold">Reviews</h5>
+        <ul class="list-unstyled">
+            @foreach (var review in Model.Reviews)
+            {
+                <li class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <strong>@review.UserReviews</strong>
+                        <span class="text-muted">@review.Data.ToString("MMMM dd, yyyy")</span>
+                    </div>
+                    <p>@review.Comment</p>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <span class="ms-2">@review.Rating</span>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+}

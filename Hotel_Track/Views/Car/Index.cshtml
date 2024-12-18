@@ -1,0 +1,233 @@
+﻿@model List<Car>
+
+<div class="container-fluid p-0 m-0">
+    <!-- Background Image and Search Section -->
+    <div class="background-image-wrapper position-relative d-flex align-items-center justify-content-center flex-column">
+        <div class="content-container w-75" style="z-index: 3;">
+            <div class="text-center mb-4" style="color: white;">
+                <h1 class="fw-bold" style="font-family: 'Roboto', sans-serif; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Car hire for any kind of trip</h1>
+                <p class="fs-5" style="font-family: 'Roboto', sans-serif; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">Great cars at great prices, from the biggest car rental companies</p>
+            </div>
+
+            <div class="search-background p-3 rounded" style="background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 4px solid #cc8e00;">
+                <form asp-action="Search" method="get">
+                    <div class="row g-0 align-items-center">
+                        <!-- Destination Input -->
+                        <div class="col-md-3 position-relative">
+                            <label for="DepartureLocation" class="form-label visually-hidden">Pick-Up Location</label>
+                            <input type="text" id="DepartureLocation" placeholder="Pick-Up Location" class="form-control form-control-lg text-dark"
+                                   name="DepartureLocation" value="">
+                            <span class="input-icon position-absolute" style="top: 8px; left: 8px;"><i class="bi bi-search"></i></span>
+                        </div>
+
+                        <!-- Date  Input -->
+                        <div class="col-md-4 position-relative">
+                            <label for="pickUpDate" class="form-label visually-hidden">Pick-up Date</label>
+                            <input type="date" id="pickUpDate" class="form-control form-control-lg" placeholder="Pick-up Date"
+                                   name="PickUpDate" style="padding-left: 40px; font-size: 0.8rem; border: 1px solid #cc8e00; border-radius: 25px; height: 40px;">
+                            <span class="input-icon position-absolute" style="top: 8px; left: 15px;"><i class="bi bi-calendar-check"></i></span>
+                        </div>
+
+                        <!-- Time Input -->
+                        <div class="col-md-3 position-relative">
+                            <label for="pickUpTime" class="form-label visually-hidden">Pick-up Time</label>
+                            <input type="time" id="pickUpTime" class="form-control form-control-lg" name="PickUpTime" placeholder="Select Pick-up Time" style="padding-left: 40px; font-size: 0.8rem; border: 1px solid #cc8e00; border-radius: 25px; height: 40px;">
+                            <span class="input-icon position-absolute" style="top: 8px; left: 15px;"><i class="bi bi-clock"></i></span>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary btn-lg w-100" style="border-radius: 25px; border: none;">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- Travel More, Spend Less Section -->
+    <section class="travel-section" style="padding: 50px 0; background-color: white;">
+        <div class="container">
+            <!-- Travel More, Spend Less heading -->
+            <h2  style="font-size: 1.5rem; font-weight: bold; text-align: left;">Travel More, Spend Less</h2>
+
+            <!-- Card with full width and image inside -->
+            <div class="card" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <div class="row g-0">
+                    <!-- Card Content on the left -->
+                    <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                        <h4>Sign in, save money</h4>
+                        <p class="card-text mb-4">Save 10% on select rental cars - just Sign in .</p>
+                        <!-- Buttons inside the card -->
+                        <div class="d-flex ">
+                            <!-- Sign In Button (Blue Background) -->
+                            <a href="#" class="btn btn-primary w-48" style="transition: background-color 0.3s ease; margin-right: 10px;">Sign In</a>
+
+                            <!-- Register Button (White Background) -->
+                            <a href="#" class="btn btn-light w-48" style="transition: background-color 0.3s ease; border: 1px solid #0056b3; color: #0056b3;">Register</a>
+                        </div>
+                    </div>
+
+                    <!-- Image on the right, smaller image at the end -->
+                    <div class="col-md-6 d-flex align-items-center justify-content-end">
+                        <img src="https://th.bing.com/th/id/OIP.smXKeuA5n-s8yqXFsUCE_AHaHv?rs=1&pid=ImgDetMain" alt="Travel Image" class="img-fluid" style="border-radius: 20px; max-width: 100px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="support-section" style="padding: 50px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <!-- Row containing 3 sections -->
+            <div class="row text-center">
+                <!-- First Section -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                    <div class="text-center">
+                        <img src="https://t-cf.bstatic.com/design-assets/assets/v3.138.1/illustrations-traveller/CustomerService.png" alt="Support Icon 1" class="img-fluid rounded-circle mb-3">
+                        <p class="fw-bold">We’re here for you</p>
+                        <p>Customer support in over 30 languages</p>
+                    </div>
+                </div>
+
+                <!-- Second Section -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                    <div class="text-center">
+                        <img src="https://t-cf.bstatic.com/design-assets/assets/v3.138.1/illustrations-traveller/Reviews.png" alt="Support Icon 2" class="img-fluid rounded-circle mb-3">
+                        <p class="fw-bold">Fast Response</p>
+                        <p>We respond to inquiries within 24 hours</p>
+                    </div>
+                </div>
+
+                <!-- Third Section -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center mb-4">
+                    <div class="text-center">
+                        <img src="https://t-cf.bstatic.com/design-assets/assets/v3.138.1/illustrations-traveller/FreeCancellation.png" alt="Support Icon 3" class="img-fluid rounded-circle mb-3">
+                        <p class="fw-bold">24/7 Availability</p>
+                        <p>Our team is available around the clock</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<style>
+    .background-image-wrapper {
+        background-image: url(https://th.bing.com/th/id/OIP.vzGujCTlbarDnR8uJ-_IcAHaEo?rs=1&pid=ImgDetMain);
+        background-size: cover;
+        background-position: center;
+        width: 120%;
+        height: 50vh;
+        position: relative;
+        margin-left: -10%;
+        margin-bottom: 5%;
+    }
+
+        .background-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+            z-index: 1;
+        }
+
+    /* Search Section Styling */
+    .search-background {
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 4px solid #cc8e00;
+    }
+
+    ::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .form-control {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .form-control, .form-control-lg {
+        height: 40px;
+        padding-left: 40px;
+        font-size: 0.8rem;
+        border: 1px solid #cc8e00;
+        border-radius: 25px;
+        position: relative;
+    }
+
+        .form-control-lg:focus {
+            outline: none;
+            border-color: #0044cc;
+            box-shadow: 0 0 5px rgba(0, 68, 204, 0.5);
+        }
+
+    button[type="submit"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 68, 204, 0.8);
+    }
+
+    button[type="submit"] {
+        height: 40px;
+        background-color: #0044cc;
+        color: #fff;
+        border-radius: 25px;
+        font-weight: bold;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #0033a1;
+            transform: scale(1.05);
+        }
+
+    .travel-section {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #0056b3;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        width: 28%;
+        text-align: center;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .img-fluid {
+        border-radius: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+</style>

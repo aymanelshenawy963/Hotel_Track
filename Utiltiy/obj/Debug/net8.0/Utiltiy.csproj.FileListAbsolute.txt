@@ -1,0 +1,52 @@
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.deps.json
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.sourcelink.json
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.Up2Date
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\refint\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Code1\Utiltiy\obj\Debug\net8.0\ref\Utiltiy.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.deps.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.runtimeconfig.json
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Model.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\bin\Debug\net8.0\Model.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.AssemblyReference.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.GeneratedMSBuildEditorConfig.editorconfig
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfoInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfo.cs
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.CoreCompileInputs.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.Up2Date
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\refint\Utiltiy.dll
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.pdb
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.genruntimeconfig.cache
+E:\abdo abdo\programing\back end\era-soft back end\Mega Project\Code1\Code1\Utiltiy\obj\Debug\net8.0\ref\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.deps.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.runtimeconfig.json
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Model.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\bin\Debug\net8.0\Model.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.AssemblyReference.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.GeneratedMSBuildEditorConfig.editorconfig
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfoInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.AssemblyInfo.cs
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.CoreCompileInputs.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.csproj.Up2Date
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\refint\Utiltiy.dll
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.pdb
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\Utiltiy.genruntimeconfig.cache
+D:\EraaSoft\Hotel_Project\Final_Code\Code1\Utiltiy\obj\Debug\net8.0\ref\Utiltiy.dll

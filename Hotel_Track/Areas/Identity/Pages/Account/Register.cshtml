@@ -1,0 +1,128 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        max-width: 600px;
+        margin-top: 50px;
+    }
+
+    section {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #007bff;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: all 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+    .form-floating label {
+        color: #6c757d;
+    }
+
+    .form-floating input:focus {
+        border-color: #007bff;
+        box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .form-floating span {
+        font-size: 0.875rem;
+    }
+
+    .text-center a {
+        color: #007bff;
+        transition: color 0.3s ease;
+    }
+
+        .text-center a:hover {
+            color: #0056b3;
+        }
+</style>
+
+<div class="container">
+    <section>
+        <h2>Create a New Account</h2>
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" novalidate>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+            <!-- First Name -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FirstName" class="form-control" maxlength="100" id="firstName" placeholder="First Name" />
+                <label for="firstName">First Name</label>
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.LastName" class="form-control" maxlength="100" id="lastName" placeholder="Last Name" />
+                <label for="lastName">Last Name</label>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" id="email" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label for="email">Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" type="password" class="form-control" id="password" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                <label for="password">Password</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmPassword" type="password" class="form-control" id="confirmPassword" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+                <label for="confirmPassword">Confirm Password</label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <!-- Address -->
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Address" class="form-control" id="address" autocomplete="address" aria-required="true" placeholder="Address" />
+                <label for="address">Address</label>
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+
+            <div class="d-grid">
+                <button id="registerSubmit" type="submit" class="btn btn-primary btn-lg">Register</button>
+            </div>
+
+            <p class="text-center mt-3">
+                Already have an account?
+                <a asp-page="./Login">Log in</a>
+            </p>
+        </form>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
