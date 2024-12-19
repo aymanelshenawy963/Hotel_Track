@@ -22,6 +22,17 @@ namespace Hotel_Track
 
             // Add services to the container.
             builder.Services.AddTransient<IEmailSender, EmailSender>();
+            builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+            });
+            //Facebook Registeration
+            builder.Services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = builder.Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
+            });
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDbContext>(
                 option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
