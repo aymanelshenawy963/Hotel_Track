@@ -1,22 +1,7 @@
 ﻿﻿@using Hotel_Track.Utility
 @using Model.ViewModels
 @model HotelPaginationViewModel
-<div class="row mb-3">
-    <div class="col-7">
-        <nav class="fs-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item "><a href="/Home/index" class="fs-3">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><span class="fs-3">All Hotels</span></li>
-            </ol>
-        </nav>
-    </div>
-    @if (User.IsInRole(SD.Admin))
-    {
-        <div class="col-3">
-            <a href="/Hotel/Create" type="button" class="btn btn-success btn-lg"><i class="bi bi-plus-circle col-12"></i> Add New Hotel</a>
-        </div>
-    }
-</div>
+
 <style>
     .card {
         border-radius: 8px;
@@ -38,10 +23,27 @@
         color: #666;
     }
 </style>
-<div class="col-md-9">
+<div class="col-12 d-flex flex-column justify-content-center">
+<div class="mb-3 col-12 justify-content-between">
+    <div>
+        <nav class="fs-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item "><a href="/Home/index" class="fs-3">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><span class="fs-3">All Hotels</span></li>
+            </ol>
+        </nav>
+    </div>
+    @if (User.IsInRole(SD.Admin))
+    {
+        <div class="col-3">
+            <a href="/Hotel/Create" type="button" class="btn btn-success btn-lg"><i class="bi bi-plus-circle col-12"></i> Add New Hotel</a>
+        </div>
+    }
+</div>
+<div class="col-12">
     @foreach (var hotel in Model.Hotels)
     {
-        <div class="row mb-4">
+        <div class="row mb-3">
             <div class="card d-flex flex-row shadow-sm" style="min-height: 220px; max-width: 100%;">
                 <!-- Hotel Image -->
                 <div class=" d-flex justify-content-center align-items-center col-@((User.IsInRole(SD.Admin)) ? "3" : "4")">
@@ -127,7 +129,7 @@
         </ul>
     </nav>
 </div>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -2264,10 +2264,7 @@
           "Stripe.net": "47.1.0"
         },
         "runtime": {
-          "Model.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Model.dll": {}
         }
       },
       "Utiltiy/1.0.0": {
@@ -2283,10 +2280,7 @@
           "Stripe.net": "47.1.0"
         },
         "runtime": {
-          "Utiltiy.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Utiltiy.dll": {}
         }
       }
     }

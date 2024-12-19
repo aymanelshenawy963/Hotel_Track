@@ -14,7 +14,7 @@ namespace DataAccess.Data
             public ApplicationDbContext CreateDbContext(string[] args)
             {
                 var OptionBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-                OptionBuilder.UseSqlServer("Data Source=.;Initial Catalog=Hotel_Track;Integrated Security=True;TrustServerCertificate=True");
+                OptionBuilder.UseSqlServer("Data Source=.;Initial Catalog=Hotel_Track1;Integrated Security=True;TrustServerCertificate=True");
                 return new ApplicationDbContext(OptionBuilder.Options);
             }
         }
