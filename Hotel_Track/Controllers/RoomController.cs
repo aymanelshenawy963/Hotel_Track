@@ -19,6 +19,7 @@ namespace Hotel_Track.Controllers
             this.bookingRepository = bookingRepository;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index(int hotelId, int page = 1)
         {
             int pageSize = 15; 
@@ -59,6 +60,7 @@ namespace Hotel_Track.Controllers
  
 
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
              Room room = new Room();
@@ -96,6 +98,7 @@ namespace Hotel_Track.Controllers
 
 
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int roomId)
         {
             ViewBag.hotelId = new SelectList(hotelRepository.GetAll( tracked: false), "Id", "Name");
@@ -143,6 +146,7 @@ namespace Hotel_Track.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int roomId)
         {
             Room room = new Room() { Id = roomId };
