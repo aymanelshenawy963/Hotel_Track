@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace Hotel_Track.Controllers
 {
-    [Authorize(Roles = $"{SD.Admin},{SD.Customer}")]
+    //[Authorize(Roles = $"{SD.Admin},{SD.Customer}")]
     public class HotelController : Controller
     {
         private readonly ILogger<HotelController> _logger;
@@ -47,6 +47,7 @@ namespace Hotel_Track.Controllers
         }
 
         //Add New Hotel
+        [Authorize(Roles = $"{SD.Admin}")]
         public IActionResult Create()
         {
             Hotel hotel = new Hotel();
@@ -87,6 +88,7 @@ namespace Hotel_Track.Controllers
             return View(hotel);
         }
         //Edit an Hotel
+        [Authorize(Roles = $"{SD.Admin}")]
         public IActionResult Edit(int HotelId)
         {
             var hotel = hotelRepository.Find(e => e.Id == HotelId, tracked: false);
@@ -138,6 +140,7 @@ namespace Hotel_Track.Controllers
 
         }
         //Delete an hotel
+        [Authorize(Roles = $"{SD.Admin}")]
         public IActionResult Delete(int hotelId)
         {
             var hotel = hotelRepository.GetOne(null, e => e.Id == hotelId);
